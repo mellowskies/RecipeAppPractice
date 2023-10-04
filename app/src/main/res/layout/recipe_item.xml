@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#FFE6D5"
+    android:layout_height="match_parent">
+    
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:background="#FFE6D5"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/ivFoodImage"
+            android:layout_width="128dp"
+            android:layout_height="140dp"
+            android:background="@drawable/roundstyle"
+            android:src="@drawable/testfood"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFoodName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="6dp"
+            android:fontFamily="@font/amaticscregular"
+            android:text="Французскиe круасаны\n с шоколадным\n соусом"
+            android:textColor="@color/black"
+            android:textSize="28sp"
+            app:layout_constraintStart_toEndOf="@+id/ivFoodImage"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnShow"
+            android:layout_width="140dp"
+            android:layout_height="40dp"
+            android:backgroundTint="@color/button_red"
+            android:fontFamily="@font/montserrat_alternates_semibold"
+            android:text="Посмотрим"
+            android:textColor="#FFE4D0"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@+id/tvFoodName"
+            app:layout_constraintTop_toBottomOf="@+id/tvFoodName" />
+
+        <ImageButton
+            android:id="@+id/ibFavourite"
+            android:layout_width="31dp"
+            android:layout_height="27dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/ic_favourite"
+            app:layout_constraintBottom_toBottomOf="@+id/btnShow"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnShow"
+            app:layout_constraintTop_toTopOf="@+id/btnShow" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivFoodImage">
+
+            <TextView
+                android:id="@+id/tvFoodDifficulty"
+                android:layout_width="95dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/difficulty"
+                android:fontFamily="@font/montserrat_alternates_regular"
+                android:gravity="center"
+                android:text="Простой"
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFoodImage" />
+
+            <TextView
+                android:id="@+id/tvFoodType"
+                android:layout_width="95dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/type"
+                android:fontFamily="@font/montserrat_alternates_regular"
+                android:gravity="center"
+                android:text="Завтрак"
+                android:textColor="#FFE4D0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFoodImage" />
+
+            <TextView
+                android:id="@+id/tvFoodTime"
+                android:layout_width="95dp"
+                android:layout_height="24dp"
+                android:layout_marginTop="13dp"
+                android:layout_marginEnd="6dp"
+                android:background="@drawable/roundstyle"
+                android:backgroundTint="@color/time"
+                android:fontFamily="@font/montserrat_alternates_regular"
+                android:gravity="center"
+                android:text="За 1 час "
+                android:textColor="@color/black"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivFoodImage" />
+
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

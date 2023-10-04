@@ -2,4 +2,8 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="button_red">#FF3B3B</color>
+    <color name="difficulty">#FFB28B</color>
+    <color name="type">#B15124</color>
+    <color name="time">#FF715E</color>
 </resources>
