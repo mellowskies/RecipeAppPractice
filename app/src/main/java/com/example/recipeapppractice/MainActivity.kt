@@ -1,11 +1,14 @@
 package com.example.recipeapppractice
 
+import android.content.Intent
 import android.os.Bundle
+import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapppractice.databinding.ActivityMainBinding
+import com.example.recipeapppractice.databinding.RecipeItemBinding
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -14,7 +17,9 @@ class MainActivity : AppCompatActivity() {
         // Initialization of viewBinding
         binding = ActivityMainBinding.inflate(layoutInflater)
         val mainView = binding.root
+
         super.onCreate(savedInstanceState)
+
         // Showing Splash Screen
         Thread.sleep(1000)
         installSplashScreen()
@@ -27,7 +32,6 @@ class MainActivity : AppCompatActivity() {
         recipeRecyclerView.layoutManager = LinearLayoutManager(this)
         recipeRecyclerView.adapter = adapter
 
-
         quitApp()
     }
     // Logic of exit button
@@ -36,6 +40,8 @@ class MainActivity : AppCompatActivity() {
             finish()
         }
     }
+
+
 // Create list of recipes
     private fun createRecipeList() : List<Recipes> {
         val recipes = listOf(
@@ -85,4 +91,5 @@ class MainActivity : AppCompatActivity() {
         )
         return recipes
     }
+
 }

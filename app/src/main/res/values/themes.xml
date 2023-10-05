@@ -14,4 +14,10 @@
         <item name="windowSplashScreenAnimatedIcon">@drawable/logo</item>
         <item name="postSplashScreenTheme">@style/Base.Theme.RecipeAppPractice</item>
     </style>
+
+    <style name="tabItemFont" parent="TextAppearance.Design.Tab">
+        <item name="android:fontFamily">@font/amaticscbold</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
