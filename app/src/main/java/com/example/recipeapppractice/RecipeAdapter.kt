@@ -5,16 +5,17 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapppractice.databinding.RecipeItemBinding
+import com.squareup.picasso.Picasso
 
 class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
-    private lateinit var binding : RecipeItemBinding
+//    private lateinit var binding : RecipeItemBinding
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
     ): RecipeAdapter.RecipeViewHolder {
-        val view = LayoutInflater.from(parent.context).inflate(R.layout.recipe_item, parent, false)
-        binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        return RecipeViewHolder(view)
+//        val view = LayoutInflater.from(parent.context).inflate(R.layout.recipe_item, parent, false)
+        val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
+        return RecipeViewHolder(binding)
     }
 
     override fun onBindViewHolder(holder: RecipeAdapter.RecipeViewHolder, position: Int) {
@@ -26,10 +27,10 @@ class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAda
         return recipes.size
     }
 
-    inner class RecipeViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView){
+    inner class RecipeViewHolder(private val binding: RecipeItemBinding) : RecyclerView.ViewHolder(binding.root){
         fun bind(recipes: Recipes) = with(binding){
             tvFoodName.text = recipes.name
-//            ivFoodImage.
+            Picasso.get().load(recipes.imgSource).into(ivFoodImage)
             tvFoodDifficulty.text = recipes.difficulty
             tvFoodType.text = recipes.type
             tvFoodTime.text = recipes.time

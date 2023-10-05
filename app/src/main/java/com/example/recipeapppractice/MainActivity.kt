@@ -1,10 +1,8 @@
 package com.example.recipeapppractice
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.FrameLayout
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
-import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.recipeapppractice.databinding.ActivityMainBinding
@@ -22,6 +20,7 @@ class MainActivity : AppCompatActivity() {
         installSplashScreen()
         // Showing MainActivity
         setContentView(mainView)
+        // Showing RecyclerView
         recipeRecyclerView = binding.rvRecipes
         val recipes = createRecipeList()
         val adapter = RecipeAdapter(recipes)
@@ -32,20 +31,58 @@ class MainActivity : AppCompatActivity() {
         quitApp()
     }
     // Logic of exit button
-    fun quitApp() = with(binding){
+    private fun quitApp() = with(binding){
         btnExit.setOnClickListener{
             finish()
         }
     }
+// Create list of recipes
+    private fun createRecipeList() : List<Recipes> {
+        val recipes = listOf(
+            Recipes(
+                name = "Французскиe круасаны\n с шоколадным\n соусом",
+                imgSource = R.drawable.testfood,
+                difficulty = "Простой",
+                type = "Завтрак",
+                time = "За 1 час"
+            ),
+            Recipes(
+                name = "Пряный тыквенный суп",
+                imgSource = R.drawable.soup,
+                difficulty = "Продвинутый",
+                type = "Суп",
+                time = "За 2 часа"
+            ),
+            Recipes(
+                name = "Греческая тарелка\n с инжиром и беконом",
+                imgSource = R.drawable.buckwheat,
+                difficulty = "Простой",
+                type = "Завтрак",
+                time = "За 30 минут"
+            ),
+            Recipes(
+                name = "Французскиe круасаны\n с шоколадным\n соусом",
+                imgSource = R.drawable.testfood,
+                difficulty = "Простой",
+                type = "Завтрак",
+                time = "За 1 час"
+            ),
+            Recipes(
+                name = "Пряный тыквенный суп",
+                imgSource = R.drawable.soup,
+                difficulty = "Продвинутый",
+                type = "Суп",
+                time = "За 2 часа"
+            ),
+            Recipes(
+                name = "Греческая тарелка\n с инжиром и беконом",
+                imgSource = R.drawable.buckwheat,
+                difficulty = "Простой",
+                type = "Завтрак",
+                time = "За 30 минут"
+            )
 
-    fun createRecipeList() : List<Recipes> {
-        val recipe1 = Recipes(
-            name = "Бебра",
-            imgSource = "",
-            difficulty = "Сложно",
-            type = "Обед",
-            time = "За 2 часа"
         )
-        return listOf(recipe1)
+        return recipes
     }
 }
