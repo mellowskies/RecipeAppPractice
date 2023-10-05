@@ -12,13 +12,13 @@ class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAda
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
-    ): RecipeAdapter.RecipeViewHolder {
+    ): RecipeViewHolder {
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.recipe_item, parent, false)
         val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
         return RecipeViewHolder(binding)
     }
 
-    override fun onBindViewHolder(holder: RecipeAdapter.RecipeViewHolder, position: Int) {
+    override fun onBindViewHolder(holder: RecipeViewHolder, position: Int) {
         val recipe = recipes[position]
         holder.bind(recipe)
     }
