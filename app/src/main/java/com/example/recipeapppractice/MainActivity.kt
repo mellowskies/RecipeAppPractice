@@ -41,7 +41,6 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-
 // Create list of recipes
     private fun createRecipeList() : List<Recipes> {
         val recipes = listOf(
