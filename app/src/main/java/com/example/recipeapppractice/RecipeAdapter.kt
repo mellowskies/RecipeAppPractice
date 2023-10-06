@@ -18,7 +18,7 @@ class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAda
     ): RecipeViewHolder {
 //        val view = LayoutInflater.from(parent.context).inflate(R.layout.recipe_item, parent, false)
         val binding = RecipeItemBinding.inflate(LayoutInflater.from(parent.context), parent, false)
-        val showRecipeInfo: Button = binding.btnShow
+//        val showRecipeInfo: Button = binding.btnShow
         return RecipeViewHolder(binding)
     }
 
