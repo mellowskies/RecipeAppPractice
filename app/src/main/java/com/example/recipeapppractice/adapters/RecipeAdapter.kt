@@ -1,17 +1,18 @@
-package com.example.recipeapppractice
+package com.example.recipeapppractice.adapters
 
 import android.content.Intent
 import android.view.LayoutInflater
-import android.view.View
 import android.view.ViewGroup
 import android.widget.Button
+import android.widget.Toast
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recipeapppractice.RecipeInfoActivity
+import com.example.recipeapppractice.dataclasses.Recipes
 import com.example.recipeapppractice.databinding.RecipeItemBinding
 import com.squareup.picasso.Picasso
-import kotlinx.coroutines.NonDisposableHandle.parent
 
 class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAdapter.RecipeViewHolder>() {
-//    private lateinit var binding : RecipeItemBinding
+    private lateinit var binding : RecipeItemBinding
     override fun onCreateViewHolder(
         parent: ViewGroup,
         viewType: Int
@@ -26,8 +27,21 @@ class RecipeAdapter(val recipes: List<Recipes>) : RecyclerView.Adapter<RecipeAda
         val recipe = recipes[position]
         holder.bind(recipe)
         holder.btnShowRecipeInfo.setOnClickListener{
-            val intent = Intent(holder.itemView.context, RecipeInfoActivity::class.java)
-            holder.itemView.context.startActivity(intent)
+
+
+            val position = holder.position
+            when (position){
+                0 -> {
+
+                }
+                1 -> {
+                    val intent = Intent(holder.itemView.context, RecipeInfoActivity::class.java)
+                    holder.itemView.context.startActivity(intent)
+                }
+                2 -> {
+
+                }
+            }
         }
     }
 

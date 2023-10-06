@@ -47,6 +47,8 @@
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/vp"
+        android:background="@drawable/roundstylebutless"
+        android:backgroundTint="@color/white"
         app:layout_goneMarginStart="32dp"
         app:layout_goneMarginEnd="32dp"
         android:layout_width="match_parent"

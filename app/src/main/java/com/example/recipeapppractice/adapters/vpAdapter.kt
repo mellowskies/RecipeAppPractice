@@ -1,4 +1,4 @@
-package com.example.recipeapppractice
+package com.example.recipeapppractice.adapters
 
 import android.widget.Adapter
 import androidx.fragment.app.Fragment

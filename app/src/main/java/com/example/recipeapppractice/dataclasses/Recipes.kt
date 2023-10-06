@@ -1,4 +1,4 @@
-package com.example.recipeapppractice
+package com.example.recipeapppractice.dataclasses
 
 import android.graphics.drawable.Drawable
 

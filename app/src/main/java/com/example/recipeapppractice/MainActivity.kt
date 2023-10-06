@@ -1,14 +1,14 @@
 package com.example.recipeapppractice
 
-import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recipeapppractice.adapters.RecipeAdapter
+import com.example.recipeapppractice.adapters.RecipeIngredientsAdapter
 import com.example.recipeapppractice.databinding.ActivityMainBinding
-import com.example.recipeapppractice.databinding.RecipeItemBinding
+import com.example.recipeapppractice.dataclasses.Recipes
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -54,7 +54,7 @@ class MainActivity : AppCompatActivity() {
             Recipes(
                 name = "Пряный тыквенный суп",
                 imgSource = R.drawable.soup,
-                difficulty = "Продвинутый",
+                difficulty = "Продвинут",
                 type = "Суп",
                 time = "За 2 часа"
             ),
@@ -63,30 +63,23 @@ class MainActivity : AppCompatActivity() {
                 imgSource = R.drawable.buckwheat,
                 difficulty = "Простой",
                 type = "Завтрак",
-                time = "За 30 минут"
+                time = "За 30 мин"
             ),
+            // Since I can't code the rest of the list just holds the elements on the right place in recyclerview
             Recipes(
-                name = "Французскиe круасаны\n с шоколадным\n соусом",
-                imgSource = R.drawable.testfood,
-                difficulty = "Простой",
-                type = "Завтрак",
-                time = "За 1 час"
-            ),
-            Recipes(
-                name = "Пряный тыквенный суп",
-                imgSource = R.drawable.soup,
-                difficulty = "Продвинутый",
-                type = "Суп",
-                time = "За 2 часа"
+                name = "",
+                imgSource = R.drawable.list_dot,
+                difficulty = "",
+                type = "",
+                time = ""
             ),
             Recipes(
                 name = "Греческая тарелка\n с инжиром и беконом",
                 imgSource = R.drawable.buckwheat,
                 difficulty = "Простой",
                 type = "Завтрак",
-                time = "За 30 минут"
-            )
-
+                time = "За 30 мин"
+            ),
         )
         return recipes
     }

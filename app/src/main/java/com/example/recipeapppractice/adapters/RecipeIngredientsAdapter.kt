@@ -1,10 +1,12 @@
-package com.example.recipeapppractice
+package com.example.recipeapppractice.adapters
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
+import com.example.recipeapppractice.R
+import com.example.recipeapppractice.dataclasses.RecipeIngredients
 
 class RecipeIngredientsAdapter(val ingredients: List<RecipeIngredients>) : RecyclerView.Adapter<RecipeIngredientsAdapter.RecipeIngredientsViewHolder>() {
     override fun onCreateViewHolder(
